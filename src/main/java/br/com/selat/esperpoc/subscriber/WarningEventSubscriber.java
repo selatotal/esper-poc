@@ -13,7 +13,7 @@ public class WarningEventSubscriber implements StatementSubscriber{
 
     @Override
     public String getStatement() {
-        return "select * from TemperatureEvent " +
+        return "@name('warningEventStatement') select * from TemperatureEvent " +
                 "match_recognize (" +
                 "   measures A as temp1, B as temp2 " +
                 "   pattern (A B)" +

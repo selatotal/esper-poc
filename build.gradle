@@ -22,7 +22,9 @@ repositories {
 
 dependencies {
     // This dependency is used by the application.
-    compile group: 'com.espertech', name: 'esper', version: '7.1.0'
+    compile group: 'com.espertech', name: 'esper-common', version: '8.5.0'
+    compile group: 'com.espertech', name: 'esper-runtime', version: '8.5.0'
+    compile group: 'com.espertech', name: 'esper-compiler', version: '8.5.0'
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.28'
 
     // Use JUnit test framework

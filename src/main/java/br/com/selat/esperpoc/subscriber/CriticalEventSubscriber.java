@@ -14,7 +14,7 @@ public class CriticalEventSubscriber implements StatementSubscriber{
 
     @Override
     public String getStatement() {
-        return "select * from TemperatureEvent " +
+        return "@name('criticalEventStatement') select * from TemperatureEvent " +
                 "match_recognize (" +
                 "   measures A as temp1, B as temp2, C as temp3, D as temp4 " +
                 "   pattern (A B C D)" +

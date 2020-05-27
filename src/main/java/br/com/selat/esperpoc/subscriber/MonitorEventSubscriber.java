@@ -11,7 +11,7 @@ public class MonitorEventSubscriber implements StatementSubscriber{
 
     @Override
     public String getStatement() {
-        return "select avg(temperature) as avg_val from TemperatureEvent.win:time_batch(5 sec) ";
+        return "@name('monitorEventStatement') select avg(temperature) as avg_val from TemperatureEvent.win:time_batch(5 sec) ";
     }
 
     public void update(Map<String, Double> eventMap){
